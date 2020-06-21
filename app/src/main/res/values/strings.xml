@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AP-Covid19 Project</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="category_food_provider">
+        <item>Select</item>
+        <item>Free Food</item>
+        <item>Accommodation</item>
+        <item>Donate Medicine</item>
+        <item>Donate Relief Materials</item>
+        <item>Donate Hospital consumables</item>
+        <item>Shelter Homes</item>
+        <item>Doctor Online Appointment</item>
+        <item>Hospital Admissions</item>
+        <item>Delivery of groceries and medicines</item>
+    </string-array>
+</resources>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/myhealthstatus_bg"
+    android:layout_height="match_parent"
+    tools:context=".MyHealthStatusActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/formlayout"
+            android:padding="15dp"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Fill this to check your Health Status"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Do you have cough?"
+                android:textColor="@android:color/black" />
+            <RadioGroup
+                android:id="@+id/radiogrp_caugh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/coughyes"
+                    android:fontFamily="@font/nunito"
+                    />
+
+                <RadioButton
+                    android:id="@+id/coughno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have you had fever recently?"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/nunito_semibold"/>
+            <RadioGroup
+                android:id="@+id/radiogrp_fever"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/feveryes"
+                    android:fontFamily="@font/nunito"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/feverno"
+                    android:fontFamily="@font/nunito"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you have Breathing issues?"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/nunito_semibold"/>
+            <RadioGroup
+                android:id="@+id/radiogrp_breath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/breathyes"
+                    android:fontFamily="@font/nunito"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/breathno"
+                    android:fontFamily="@font/nunito"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have you travelled to foreign countries recently?"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/nunito_semibold"/>
+
+            <RadioGroup
+                android:id="@+id/radiogrp_travel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/travelyes"
+                    android:fontFamily="@font/nunito"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/travelno"
+                    android:fontFamily="@font/nunito"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have you been with someone who has been tested positive for the corona virus?  "
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/nunito_semibold"/>
+
+            <RadioGroup
+                android:id="@+id/radiogrp_nearaffected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/nafyes"
+                    android:fontFamily="@font/nunito"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/nafno"
+                    android:fontFamily="@font/nunito"
+                    />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:id="@+id/toolbar"
+        android:background="@drawable/rounded_white">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/back"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_toEndOf="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorBlack"
+            android:text="Check Health Status"
+            android:layout_toRightOf="@+id/toolbar_icon"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/done"
+        android:tint="@android:color/white" />
+
+</RelativeLayout>

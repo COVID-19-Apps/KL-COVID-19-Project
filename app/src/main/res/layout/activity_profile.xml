@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="10dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Name"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/age_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_text">
+
+                    <EditText
+                        android:id="@+id/edit_profile_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Age"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_below="@+id/age_text"
+                    android:id="@+id/edit_profile_sex"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Male"
+                        android:textSize="18dp"
+                        android:checked="true"
+                        android:id="@+id/edit_profile_male"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Female"
+                        android:textSize="18dp"
+                        android:id="@+id/edit_profile_female"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Others"
+                        android:textSize="18dp"
+                        android:layout_weight="1"
+                        android:id="@+id/edit_profile_others"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Location"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/nunito"
+                    android:padding="5dp"
+                    android:id="@+id/edit_profile_get_location"
+                    android:layout_below="@+id/edit_profile_sex"
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_get_location">
+
+                    <EditText
+                        android:id="@+id/edit_profile_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Address"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/city_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address_text">
+
+                    <EditText
+                        android:id="@+id/edit_profile_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="City"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/state_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/city_text">
+
+                    <EditText
+                        android:id="@+id/edit_profile_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="State"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/country_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/state_text">
+
+                    <EditText
+                        android:id="@+id/edit_profile_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Country"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/country_text">
+
+                    <EditText
+                        android:id="@+id/edit_profile_email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/edit_profile_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email_address_text"
+                    android:fontFamily="@font/nunito"
+                    android:hint="Phone Number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:id="@+id/toolbar"
+        android:background="@drawable/rounded">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/back"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_toEndOf="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorBlack"
+            android:text="Profile"
+            android:layout_toRightOf="@+id/toolbar_icon"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_profile_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="28dp"
+            android:src="@drawable/save"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

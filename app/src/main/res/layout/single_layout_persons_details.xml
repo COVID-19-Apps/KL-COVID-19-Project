@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:padding="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Name"
+            android:drawableStart="@drawable/name"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/name"
+            android:fontFamily="@font/nunito"
+            android:id="@+id/name"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Type"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:autoLink="map"
+            android:fontFamily="@font/nunito_bold"
+            android:drawableStart="@drawable/type"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/type"
+            android:id="@+id/type"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Desc"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/nunito"
+            android:drawableStart="@drawable/desc"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/desc"
+            android:id="@+id/desc"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Address"
+            android:drawableStart="@drawable/location"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/location"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:autoLink="map"
+            android:fontFamily="@font/nunito"
+            android:id="@+id/location"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Phone"
+            android:textSize="15dp"
+            android:id="@+id/phone"
+            android:textColor="@color/colorBlack"
+            android:autoLink="phone"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/nunito"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/phone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Email"
+            android:textSize="15dp"
+            android:id="@+id/email"
+            android:autoLink="email"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/email"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/nunito"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/email" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

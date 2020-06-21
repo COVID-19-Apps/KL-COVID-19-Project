@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:id="@+id/toolbar"
+        android:background="@drawable/rounded_white">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/dashboard"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_toEndOf="@+id/toolbar_icon"
+            android:layout_centerVertical="true"
+            android:textSize="15dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorBlack"
+            android:text="Andhra Pradesh Dashboard"
+            android:layout_toRightOf="@+id/toolbar_icon"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/toolbar_menu"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/menu"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/toolbar_profile"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/toolbar_menu"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/profile"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/dashboard"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/rounded_white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_gravity="right">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/result_negative_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/negative" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/result_negative_details"
+                    android:layout_toEndOf="@id/result_negative_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/result_negative_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Negative Cases"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/results_negative_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="591403"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/result_positive_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/positive" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/result_positive_details"
+                    android:layout_toEndOf="@id/result_positive_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/result_positive_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Confirmed Cases"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/results_positive_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="5555"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/result_awaited_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/awaited" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/result_awaited_details"
+                    android:layout_toEndOf="@id/result_awaited_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/result_awaited_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Decresed"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/results_awaited_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="90"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/active_positive_cases_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/active" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/active_positive_cases_details"
+                    android:layout_toEndOf="@id/active_positive_cases_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/active_positive_cases_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Active Positive Cases"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/active_positive_cases_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="2559"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/total_samples_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/test_cases" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/total_samples_details"
+                    android:layout_toEndOf="@id/total_samples_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/total_samples_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Total Samples"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/total_samples_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="598474"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/cured_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cured" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/cured_details"
+                    android:layout_toEndOf="@id/cured_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/cured_image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:text="Cured"
+                        android:fontFamily="@font/nunito" />
+
+                    <TextView
+                        android:id="@+id/cured_count"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="2906"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </GridLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/grid"
+        android:layout_below="@+id/dashboard"
+        android:background="@drawable/main_grid"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/grid_view"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
